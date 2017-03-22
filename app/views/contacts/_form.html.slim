@@ -1,0 +1,14 @@
+= simple_form_for(@contact) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :valeur
+    / = f.input :type_contact
+    div.form-group
+    	= f.select :type_contact, Contact.type_contacts.keys.to_a.map { |w| [w.humanize, w] }, class: "form-control"
+    div.form-group
+    	= f.collection_select :patient_id, Patient.order(:nom_usage).all, :id, :nom_complet, prompt: "Sélectionner un patient", class: "form-control"
+
+
+  .form-actions
+    = f.button :submit

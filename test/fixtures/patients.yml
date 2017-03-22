@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+sam:
+  nom_usage: GRATICCI
+  prenom_usage: Sam
+  date_naissance: 2001-02-28
+
+bill:
+  nom_usage: BOQUET
+  prenom_usage: Bill
+  date_naissance: 1980-05-14
+
+simon:
+  nom_usage: CUSSONET
+  prenom_usage: Simon
+  date_naissance: 1973-11-30

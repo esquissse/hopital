@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+oh:
+  nom_usage: Hergébel
+  prenom_usage: Octave
+
+gh:
+  nom_usage: House
+  prenom_usage: Gregory
+
+sr:
+  nom_usage: Renard
+  prenom_usage: Samantha

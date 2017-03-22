@@ -1,0 +1,23 @@
+h1 Listing types_donnees_vitales
+
+table
+  thead
+    tr
+      th Libelle
+      th Unite
+      th
+      th
+      th
+
+  tbody
+    - @types_donnees_vitales.each do |type_donnee_vitale|
+      tr
+        td = type_donnee_vitale.libelle
+        td = type_donnee_vitale.unite
+        td = link_to 'Show', type_donnee_vitale
+        td = link_to 'Edit', edit_type_donnee_vitale_path(type_donnee_vitale)
+        td = link_to 'Destroy', type_donnee_vitale, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Type donnee vitale', new_type_donnee_vitale_path

@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+a:
+  date_heure: 2017-03-02 18:10:00
+  sejour: one
+  type_acte: radio_du_bras
+  docteur: oh
+
+b:
+  date_heure: 2017-03-02 19:00:00
+  sejour: one
+  type_acte: anesthesie_locale
+  docteur: sr
+
+c:
+  date_heure: 2017-03-02 19:10:00
+  sejour: one
+  type_acte: reduction_fracture
+  docteur: gh
+
+d:
+  date_heure: 2017-03-02 20:00:00
+  sejour: one
+  type_acte: platre
+  docteur: oh
+
+e:
+  date_heure: 2016-12-20 10:10:00
+  sejour: two
+  type_acte: brainswap
+  docteur: gh

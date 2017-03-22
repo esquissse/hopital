@@ -1,0 +1,19 @@
+p#notice = notice
+
+p
+  strong Date:
+  = @donnee_vitale.date
+p
+  strong Valeur:
+  = @donnee_vitale.valeur
+p
+  strong Patient:
+  = @donnee_vitale.try(:patient).try(:nom_complet)
+
+p
+  strong TypeDonneeVitale:
+  = @donnee_vitale.try(:type_donnee_vitale).libelle + " - #{@donnee_vitale.try(:type_donnee_vitale).try(:unite)}"
+
+= link_to 'Edit', edit_donnee_vitale_path(@donnee_vitale)
+'|
+= link_to 'Back', donnees_vitales_path

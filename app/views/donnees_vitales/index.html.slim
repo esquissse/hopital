@@ -1,0 +1,25 @@
+h1 Listing donnees_vitales
+
+table
+  thead
+    tr
+      th Date
+      th Valeur
+      th Patient
+      th
+      th
+      th
+
+  tbody
+    - @donnees_vitales.each do |donnee_vitale|
+      tr
+        td = donnee_vitale.date
+        td = donnee_vitale.valeur
+        td = donnee_vitale.patient_id
+        td = link_to 'Show', donnee_vitale
+        td = link_to 'Edit', edit_donnee_vitale_path(donnee_vitale)
+        td = link_to 'Destroy', donnee_vitale, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Donnee vitale', new_donnee_vitale_path

@@ -1,0 +1,14 @@
+= simple_form_for(@sejour) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :date_debut
+    = f.input :date_fin
+    = f.input :patient_id do
+    	= f.select :patient_id, Patient.order(:nom_usage).all.map { |p| [p.nom_complet, p.id, {class: 'form-control'}]}, include_blank: true
+    = f.input :service_id do
+    	= f.select :service_id, Service.order(:libelle).all.map { |s| [s.libelle, s.id, {class: 'form-control'}] }, include_blank: true
+
+
+  .form-actions
+    = f.button :submit

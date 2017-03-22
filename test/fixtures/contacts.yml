@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  valeur: 061234567
+  type_contact: 3
+  patient: sam
+
+two:
+  valeur: sam@bidule.sy
+  type_contact: 2
+  patient: sam
+
+two:
+  valeur: bill@gates.com
+  type_contact: 2
+  patient: bill

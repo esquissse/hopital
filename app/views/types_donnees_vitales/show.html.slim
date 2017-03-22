@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Libelle:
+  = @type_donnee_vitale.libelle
+p
+  strong Unite:
+  = @type_donnee_vitale.unite
+
+= link_to 'Edit', edit_type_donnee_vitale_path(@type_donnee_vitale)
+'|
+= link_to 'Back', types_donnees_vitales_path

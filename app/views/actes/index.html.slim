@@ -1,0 +1,23 @@
+h1 Listing actes
+
+table
+  thead
+    tr
+      th Date heure
+      th Type acte
+      th
+      th
+      th
+
+  tbody
+    - @actes.each do |acte|
+      tr
+        td = acte.date_heure
+        td = acte.type_acte_id
+        td = link_to 'Show', acte
+        td = link_to 'Edit', edit_acte_path(acte)
+        td = link_to 'Destroy', acte, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Acte', new_acte_path

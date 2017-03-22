@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Date debut:
+  = @sejour.date_debut
+p
+  strong Date fin:
+  = @sejour.date_fin
+p
+  strong Patient:
+  = @sejour.try(:patient).try(:nom_complet)
+
+p
+	strong Service:
+	= @sejour.try(:service).try(:libelle)
+
+=@sejour.facture_txt
+
+= link_to 'Edit', edit_sejour_path(@sejour)
+'|
+= link_to 'Back', sejours_path

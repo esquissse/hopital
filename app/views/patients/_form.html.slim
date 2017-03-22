@@ -1,0 +1,33 @@
+= simple_nested_form_for(@patient) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :IPP, disabled: true, hint: "Vous ne pouvez pas remplir ce champ, ce numéro est attribué automatiquement par le système !"
+    = f.input :nom_usage
+    = f.input :prenom_usage
+    = f.input :nom_naissance
+    = f.input :date_naissance
+    = f.input :commune_naissance
+    = f.input :pays_naissance
+
+  
+  div.row
+    div.col-md-6
+      h2 Contacts
+      = f.fields_for :contacts do |ss_form|
+        = ss_form.input :valeur
+        = ss_form.select :type_contact, Contact.type_contacts.keys.to_a.map { |w| [w.humanize, w] }
+        = ss_form.link_to_remove "- Supprimer"
+      = f.link_to_add "+ Ajouter", :contacts
+
+    div.col-md-6
+      h2 Données Vitales
+      = f.fields_for :donnees_vitales do |ss_form|
+        = ss_form.input :date
+        = ss_form.input :valeur
+        = ss_form.select :type_donnee_vitale_id, TypeDonneeVitale.order(:libelle).all.map { |tdv| [tdv.libelle, tdv.id, {class: "form-control"}]}, include_blank: true
+        = ss_form.link_to_remove "- Supprimer"
+      = f.link_to_add "+ Ajouter", :donnees_vitales
+
+  div.form-actions
+    = f.button :submit

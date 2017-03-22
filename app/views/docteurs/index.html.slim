@@ -1,0 +1,31 @@
+h1 Listing docteurs
+
+table
+  thead
+    tr
+      th Nom usage
+      th Prenom usage
+      th Nom naissance
+      th Adeli
+      th Rpps
+      th Photo
+      th
+      th
+      th
+
+  tbody
+    - @docteurs.each do |docteur|
+      tr
+        td = docteur.nom_usage
+        td = docteur.prenom_usage
+        td = docteur.nom_naissance
+        td = docteur.adeli
+        td = docteur.rpps
+        td = docteur.photo
+        td = link_to 'Show', docteur
+        td = link_to 'Edit', edit_docteur_path(docteur)
+        td = link_to 'Destroy', docteur, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Docteur', new_docteur_path

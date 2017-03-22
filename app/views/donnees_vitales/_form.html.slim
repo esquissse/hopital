@@ -1,0 +1,13 @@
+= simple_form_for(@donnee_vitale) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :date
+    = f.input :valeur
+    = f.input :patient_id do 
+    	= f.select :patient_id, Patient.order(:nom_usage).all.map { |p| [p.nom_complet, p.id, {class: 'form-control'}]}, include_blank: true
+    = f.input :type_donnee_vitale_id do
+    	= f.select :type_donnee_vitale_id, TypeDonneeVitale.order(:libelle).all.map { |tdv| [tdv.libelle, tdv.id, {class: "form-control"}]}, include_blank: true
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Date heure:
+  = @acte.date_heure
+p
+  strong Type acte:
+  = @acte.type_acte_id
+
+= link_to 'Edit', edit_acte_path(@acte)
+'|
+= link_to 'Back', actes_path

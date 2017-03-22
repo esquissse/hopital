@@ -1,0 +1,23 @@
+h1 Listing types_actes
+
+table
+  thead
+    tr
+      th Libelle
+      th Cout
+      th
+      th
+      th
+
+  tbody
+    - @types_actes.each do |type_acte|
+      tr
+        td = type_acte.libelle
+        td = type_acte.cout
+        td = link_to 'Show', type_acte
+        td = link_to 'Edit', edit_type_acte_path(type_acte)
+        td = link_to 'Destroy', type_acte, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Type acte', new_type_acte_path

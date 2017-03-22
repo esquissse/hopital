@@ -1,0 +1,34 @@
+p#notice = notice
+
+p
+  strong Ipp:
+  = @patient.IPP
+p
+  strong Nom usage:
+  = @patient.nom_usage
+p
+  strong Prenom usage:
+  = @patient.prenom_usage
+p
+  strong Nom naissance:
+  = @patient.nom_naissance
+p
+  strong Date naissance:
+  = @patient.date_naissance
+p
+  strong Commune naissance:
+  = @patient.commune_naissance
+p
+  strong Pays naissance:
+  = @patient.pays_naissance
+
+div
+  strong Contacts:
+  - @patient.contacts.each do |c|
+    div
+      = c.valeur
+      = c.type_contact
+br
+= link_to 'Edit', edit_patient_path(@patient)
+'|
+= link_to 'Back', patients_path

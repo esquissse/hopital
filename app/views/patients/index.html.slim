@@ -1,0 +1,33 @@
+h1 Listing patients
+
+table
+  thead
+    tr
+      th Ipp
+      th Nom usage
+      th Prenom usage
+      th Nom naissance
+      th Date naissance
+      th Commune naissance
+      th Pays naissance
+      th
+      th
+      th
+
+  tbody
+    - @patients.each do |patient|
+      tr
+        td = patient.IPP
+        td = patient.nom_usage
+        td = patient.prenom_usage
+        td = patient.nom_naissance
+        td = patient.date_naissance
+        td = patient.commune_naissance
+        td = patient.pays_naissance
+        td = link_to 'Show', patient
+        td = link_to 'Edit', edit_patient_path(patient)
+        td = link_to 'Destroy', patient, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Patient', new_patient_path

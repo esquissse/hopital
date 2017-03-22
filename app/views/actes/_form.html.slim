@@ -1,0 +1,9 @@
+= simple_form_for(@acte) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :date_heure
+    = f.input :type_acte_id
+
+  .form-actions
+    = f.button :submit

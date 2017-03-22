@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_debut: 2017-03-01
+  date_fin: 2017-03-06
+  patient: sam
+  service: chir
+
+two:
+  date_debut: 2017-02-06
+  date_fin: 2017-02-17
+  patient: bill
+  service: medint

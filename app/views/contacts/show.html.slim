@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Valeur:
+  = @contact.valeur
+p
+  strong Type contact:
+  = @contact.type_contact
+p
+  strong Patient:
+  = @contact.try(:patient).try(:nom_complet)
+
+= link_to 'Edit', edit_contact_path(@contact)
+'|
+= link_to 'Back', contacts_path

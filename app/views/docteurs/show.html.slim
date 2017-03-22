@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Nom usage:
+  = @docteur.nom_usage
+p
+  strong Prenom usage:
+  = @docteur.prenom_usage
+p
+  strong Nom naissance:
+  = @docteur.nom_naissance
+p
+  strong Adeli:
+  = @docteur.adeli
+p
+  strong Rpps:
+  = @docteur.rpps
+p
+  strong Photo:
+  = image_tag @docteur.photo
+
+= link_to 'Edit', edit_docteur_path(@docteur)
+'|
+= link_to 'Back', docteurs_path

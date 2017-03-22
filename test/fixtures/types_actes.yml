@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+radio_du_bras:
+  libelle: Radio du bras
+  cout: 12
+
+reduction_fracture:
+  libelle: Réduction de fracture
+  cout: 23
+
+platre:
+  libelle: Plâtre
+  cout: 3
+
+anesthesie_locale:
+  libelle: Anesthésie locale
+  cout: 6
+
+anesthesie_generale:
+  libelle: Anesthésie générale
+  cout: 12
+
+appendicectomie:
+  libelle: Appendicectomie
+  cout: 20
+
+brainswap:
+  libelle: Remplacement de cerveau
+  cout: 666

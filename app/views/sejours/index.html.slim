@@ -1,0 +1,27 @@
+h1 Listing sejours
+
+table
+  thead
+    tr
+      th Date debut
+      th Date fin
+      th Patient
+      th Service
+      th
+      th
+      th
+
+  tbody
+    - @sejours.each do |sejour|
+      tr
+        td = sejour.date_debut.strftime('%d/%m/%Y %H:%M')
+        td = sejour.date_fin.strftime('%d/%m/%Y %H:%M')
+        td = sejour.try(:patient).try(:nom_complet)
+        td = sejour.try(:service).try(:libelle)
+        td = link_to 'Show', sejour
+        td = link_to 'Edit', edit_sejour_path(sejour)
+        td = link_to 'Destroy', sejour, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Sejour', new_sejour_path

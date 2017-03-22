@@ -1,0 +1,40 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+a:
+  libelle: Pédiatrie
+chir:
+  libelle: Chirurgie
+c:
+  libelle: Urgences Adultes
+d:
+  libelle: Urgences Pédiatriques
+e:
+  libelle: Pédiatrie
+radio:
+  libelle: Imagerie Radio
+g:
+  libelle: Imagerie Scanner
+h:
+  libelle: Imagerie IRM
+medint:
+  libelle: Médecine interne
+j:
+  libelle: Gastroentérologie
+k:
+  libelle: Gynécologie-obstétrique
+l:
+  libelle: Laboratoire
+m:
+  libelle: Bureau des entrées
+n:
+  libelle: Facturation
+o:
+  libelle: Psychiatrie
+p:
+  libelle: Informatique
+q:
+  libelle: Espaces-verts
+r:
+  libelle: Services techniques
+s:
+  libelle: Restauration

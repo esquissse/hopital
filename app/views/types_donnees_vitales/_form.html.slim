@@ -1,0 +1,9 @@
+= simple_form_for(@type_donnee_vitale) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :libelle
+    = f.input :unite
+
+  .form-actions
+    = f.button :submit

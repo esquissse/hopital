@@ -1,0 +1,13 @@
+= simple_form_for(@docteur) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nom_usage
+    = f.input :prenom_usage
+    = f.input :nom_naissance
+    = f.input :adeli
+    = f.input :rpps
+    = f.input :photo, as: :file
+
+  .form-actions
+    = f.button :submit
